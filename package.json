@@ -1,0 +1,19 @@
+{
+  "name": "automation-engineer-test",
+  "version": "1.0.0",
+  "description": "detailed test task",
+  "scripts": {
+    "test": "jest",
+    "extendDate": "node ./src/JavaScript/tests/runExtendDate.js",
+    "salesOrder": "node ./src/JavaScript/tests/runSalesOrder.js",
+    "objectProjection": "node ./src/JavaScript/tests/runObjectProjection.js",
+    "calendarAPI": "node ./src/REST_API/runCalendarAPI.js"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.5",
+    "jest": "^29.7.0"
+  },
+  "dependencies": {
+    "axios": "^1.6.8"
+  }
+}
