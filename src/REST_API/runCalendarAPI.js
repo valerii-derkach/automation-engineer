@@ -45,7 +45,7 @@ rl.question('Enter Google Calendar ID:', (input) => {
 
       getPublicCalendarEvents(calendarId, timeMin, timeMax)
         .then(busyIntervals => {
-          console.log('Busy intervals!!:', busyIntervals);
+          console.log('Busy intervals:', busyIntervals);
           rl.close();
         })
         .catch(error => {
