@@ -8,16 +8,18 @@ const rl = readline.createInterface({
 });
 
 function parseDate(input) {
-  const timestamp = Date.parse(input);
+  const trimmedInput = input.trim();
+  const timestamp = Date.parse(trimmedInput);
   if (isNaN(timestamp)) {
-    console.error('Invalid date format. Please use ISO format (YYYY-MM-DDTHH:mm:ss.sssZ)');
+    console.error('Invalid date format. Please use ISO format (YYYY-MM-DDTHH:mm:ss.sss)');
     return null;
   }
 
   return new Date(timestamp);
 }
 
-rl.question('Enter Google Calendar ID:', (calendarId) => {
+rl.question('Enter Google Calendar ID:', (input) => {
+  const calendarId = input.trim();
   if (!calendarId) {
     console.error('Calendar ID cannot be empty.');
     rl.close();
@@ -25,7 +27,7 @@ rl.question('Enter Google Calendar ID:', (calendarId) => {
     return;
   }
 
-  rl.question('Enter the start date/time in ISO format (e.g., 2024-01-01T00:00:00Z):', (startInput) => {
+  rl.question('Enter the start date/time in ISO format (e.g., 2024-01-01T00:00:00):', (startInput) => {
     const timeMin = parseDate(startInput);
     if (!timeMin) {
       rl.close();
@@ -33,7 +35,7 @@ rl.question('Enter Google Calendar ID:', (calendarId) => {
       return;
     }
 
-    rl.question('Enter the end date/time in ISO format (e.g., 2024-01-31T23:59:59Z):', (endInput) => {
+    rl.question('Enter the end date/time in ISO format (e.g., 2024-01-31T23:59:59):', (endInput) => {
       const timeMax = parseDate(endInput);
       if (!timeMax) {
         rl.close();

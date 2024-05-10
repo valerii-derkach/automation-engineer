@@ -8,8 +8,10 @@ const rl = readline.createInterface({
 });
 
 function parseDate(input) {
-  const timestamp = Date.parse(input);
+  const trimmedInput = input.trim();
+  const timestamp = Date.parse(trimmedInput);
   if (isNaN(timestamp)) {
+
     return null;
   }
 
@@ -36,7 +38,7 @@ rl.question('Enter the first date (e.g., 2024-05-10T10:00:05): ', (firstInput) =
 
     const result = date1.daysTo(date2);
     if (result.error) {
-      console.log('Error:', result.error);
+      console.error('Error:', result.error);
     } else {
       console.log(`Complete days between: ${result}`);
     }

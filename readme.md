@@ -4,10 +4,19 @@ This project contains a collection of JavaScript applications designed to perfor
 
 ## Installation
 ```
-git clone [URL]
+git clone https://github.com/valerii-derkach/automation-engineer.git
 cd automation-engineer-test
 npm install
 ```
+
+## Files with tasks
+1.1 ./src/JavaScript/extendDate.js
+1.2 ./src/JavaScript/salesOrder.js
+1.3 ./src/JavaScript/objectProjection.js
+2 ./src/REST_API/calendarAPI.js
+3 ./src/SQL/sqlCommands.sql
+
+Additionally you can find tests in ./src/JavaScript/tests folder
 
 ## Run tests for the JavaScript tasks
 ```

@@ -11,7 +11,8 @@ console.log('Enter sales data as a JSON array (e.g., [{"amount": 10000, "quantit
 
 rl.on('line', (input) => {
   try {
-    const sales = JSON.parse(input);
+    const trimmedInput = input.trim();
+    const sales = JSON.parse(trimmedInput);
     const orderedSales = orderByTotal(sales);
     console.log('Ordered Sales:', orderedSales);
     rl.close();

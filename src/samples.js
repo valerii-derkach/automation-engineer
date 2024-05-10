@@ -17,36 +17,17 @@
 
 // arrays for 1.2 task
 
-[
-  { "amount": 5200, "quantity": 3 },
-  { "amount": 15000, "quantity": 9 },
-  { "amount": 20500, "quantity": 1 }
-]
+[ { "amount": 5200, "quantity": 3 }, { "amount": 15000, "quantity": 9 }, { "amount": 20500, "quantity": 1 } ]
  
-[
-  { "amount": 4800, "quantity": 1 },
-  { "amount": 21000, "quantity": 12 },
-  { "amount": 18000, "quantity": 2 }
-]
+[ { "amount": 4800, "quantity": 1 }, { "amount": 21000, "quantity": 12 }, { "amount": 18000, "quantity": 2 } ]
 
-// objects for 1.3 task (enter as a single line on input)
+// JSON objects for 1.3 task
 
-const src = {
-  prop11: {
-    prop21: 21,
-    prop22: {
-      prop31: 31,
-      prop32: 32
-    }
-  },
-  prop12: 12
-};
+// source: 
+// { "prop11": { "prop21": 21, "prop22": { "prop31": 31, "prop32": 32}},"prop12": 12}
 
-const proto = {
-  prop11: {
-    prop22: null
-  }
-};
+// proto: 
+// {"prop11":{"prop22":null}}
 
 // example of public calendar ID
 // a04b6c93c960f3d8c7cab107b0c9fb80b3339cbace7a0df33af75e8ef008970c@group.calendar.google.com
