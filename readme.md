@@ -16,6 +16,10 @@ cd automation-engineer-test
 npm install
 ```
 
+## To run calendarAPI you need to add a valid API_KEY
+
+Read the instructions in .env.sample file
+
 ## Files with tasks
 
 1.1 ./src/JavaScript/extendDate.js
